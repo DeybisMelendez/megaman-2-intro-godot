@@ -1,0 +1,314 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://intro/intro.gd" type="Script" id=1]
+[ext_resource path="res://font/font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://intro/background.png" type="Texture" id=3]
+[ext_resource path="res://intro/edificio_top.png" type="Texture" id=4]
+[ext_resource path="res://intro/edificio.png" type="Texture" id=5]
+[ext_resource path="res://intro/megaman_1.png" type="Texture" id=6]
+[ext_resource path="res://intro/megaman_2.png" type="Texture" id=7]
+[ext_resource path="res://intro/intro.ogg" type="AudioStream" id=8]
+[ext_resource path="res://intro/music.ogg" type="AudioStream" id=9]
+[ext_resource path="res://intro/logo2.png" type="Texture" id=10]
+[ext_resource path="res://intro/select_button/select.png" type="Texture" id=11]
+[ext_resource path="res://intro/select_button/select_2.png" type="Texture" id=12]
+[ext_resource path="res://intro/select_button/accept.ogg" type="AudioStream" id=13]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="Animation" id=2]
+resource_name = "intro"
+length = 43.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("bg:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4, 5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("story:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 5, 6, 8, 9, 10, 14, 15, 15.9, 19, 20, 21, 25, 26, 27, 30 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("building:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 4, 5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("capcom_intro:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 3, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("story/bg/text:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 9, 15, 20, 26 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "IN THE YEAR OF 200X,
+A SUPER ROBOT NAMED MEGAMAN", "WAS CREATED,
+DR. LIGHT CREATED MEGAMAN", "TO STOP THE EVER DESIRES
+OF DR. WILLY", "HOWEVER, AFTER HIS DEFEAT,
+DR. WILY CREATED EIGHT", "OF HIS OWN ROBOTS
+TO COUNTER MEGAMAN." ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("bg:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 31, 40 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -93 ), Vector2( 0, -93 ), Vector2( 0, 192 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("building:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 31, 42 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 800 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("story/bg/text:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 30, 31 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("story/bg:rect_position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 31, 33 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 137 ), Vector2( 0, 137 ), Vector2( 0, 193 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("intro:playing")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 4, 43 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[node name="intro" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.463303
+margin_right = 0.463303
+script = ExtResource( 1 )
+
+[node name="capcom_intro" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 2 )
+text = "© CAPCOM CO.LTD
+TM AND © 1989 CAPCOM U.S.A. , INC.
+LICENSED BY
+NINTENDO OF AMERICA. INC."
+align = 1
+valign = 1
+
+[node name="bg" type="Sprite" parent="."]
+position = Vector2( 0, 192 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="building" type="Node2D" parent="."]
+position = Vector2( 0, 800 )
+
+[node name="top" type="Sprite" parent="building"]
+position = Vector2( 205, -679 )
+texture = ExtResource( 4 )
+
+[node name="floors" type="Sprite" parent="building"]
+position = Vector2( 205, -247 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 102, 48, 102, 768 )
+
+[node name="megaman" type="AnimatedSprite" parent="building"]
+position = Vector2( 213, -707 )
+frames = SubResource( 1 )
+playing = true
+
+[node name="story" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="bg" type="ColorRect" parent="story"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 1.0
+margin_bottom = 56.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="text" type="Label" parent="story/bg"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 2 )
+text = "OF HIS OWN ROBOTS
+TO COUNTER MEGAMAN."
+align = 1
+valign = 1
+
+[node name="animation" type="AnimationPlayer" parent="."]
+autoplay = "intro"
+anims/intro = SubResource( 2 )
+
+[node name="intro" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
+[node name="Popup" type="Popup" parent="."]
+visible = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="menu" type="VBoxContainer" parent="Popup"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="logo" type="TextureRect" parent="Popup/menu"]
+margin_right = 256.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 256, 75 )
+texture = ExtResource( 10 )
+stretch_mode = 4
+
+[node name="normal" type="HBoxContainer" parent="Popup/menu"]
+editor/display_folded = true
+margin_top = 132.0
+margin_right = 256.0
+margin_bottom = 144.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Popup/menu/normal"]
+margin_right = 64.0
+margin_bottom = 12.0
+rect_min_size = Vector2( 64, 0 )
+
+[node name="Label" type="Label" parent="Popup/menu/normal"]
+margin_left = 68.0
+margin_right = 116.0
+margin_bottom = 12.0
+custom_fonts/font = ExtResource( 2 )
+text = "NORMAL"
+
+[node name="difficult" type="HBoxContainer" parent="Popup/menu"]
+editor/display_folded = true
+margin_top = 148.0
+margin_right = 256.0
+margin_bottom = 160.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Popup/menu/difficult"]
+margin_right = 64.0
+margin_bottom = 12.0
+rect_min_size = Vector2( 64, 0 )
+
+[node name="Label" type="Label" parent="Popup/menu/difficult"]
+margin_left = 68.0
+margin_right = 140.0
+margin_bottom = 12.0
+custom_fonts/font = ExtResource( 2 )
+text = "DIFFICULT"
+
+[node name="press_start" type="HBoxContainer" parent="Popup/menu"]
+editor/display_folded = true
+margin_top = 164.0
+margin_right = 256.0
+margin_bottom = 176.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Popup/menu/press_start"]
+margin_right = 48.0
+margin_bottom = 12.0
+rect_min_size = Vector2( 48, 0 )
+
+[node name="Label" type="Label" parent="Popup/menu/press_start"]
+margin_left = 52.0
+margin_right = 136.0
+margin_bottom = 12.0
+custom_fonts/font = ExtResource( 2 )
+text = "PRESS START"
+
+[node name="select" type="AnimatedSprite" parent="Popup"]
+position = Vector2( 56, 152 )
+frames = SubResource( 3 )
+playing = true
+
+[node name="audio" type="AudioStreamPlayer" parent="Popup/select"]
+stream = ExtResource( 13 )
+
+[connection signal="animation_finished" from="animation" to="." method="_on_animation_animation_finished"]
